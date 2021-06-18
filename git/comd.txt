@@ -1,0 +1,25 @@
+git: Comandos disponibles con git
+git commit -a -m "message": Realizar un cambio en el repositorio (-a= todos los archivos, -m=agregar un comentario, ""=comentario del commit)
+git init: Iniciar un repositorio vacio en el folder actual
+git clone <url>: Clonar un repositorio existente (url=link del repositorio)
+git status: Muestra los cambios realizados
+
+git config --global user.name "InsertarNombreDeUsuario"
+git config --global user.mail "InsertarCorreoDeUsuario"
+(Credenciales necesarias para saber quien está subiendo los cambios)
+
+git config --list: Lista de toda la configuracion del git software
+git log -#: Ver la lista de cambios (#=remplazar por cantidad de cambios que se desean ver a partir del ultimo)
+git remote -v: Ver las asignaciones de repositorios
+git push <name=origin> <branch>: Subir los cambios locales a la rama seleccionada (branch=rama en la que se subiran los cambios)
+git add <file>: Agrega los cambios realizados y archivos nuevos al commit que se vaya a realizar (file=nombre del archivo. puedes escribir "." para agregar todos los cambios)
+git remote add <name=origin> <url>: crea la ruta nueva al repositorio de github en el que se harán las actualizaciones.
+git pull <origin> <branch>: traer desde una ruta y una rama los archivos
+
+comandos importantes:
+1. git pull <origin> <branch>: traer desde una ruta y una rama los archivos
+#haces los cambios que necesites hacer
+2. git status: Muestra los cambios realizados
+3. git add <file>: Agrega los cambios realizados y archivos nuevos al commit que se vaya a realizar (file=nombre del archivo. puedes escribir "." para agregar todos los cambios)
+4. git commit -m "message": Realizar un cambio en el repositorio (-m=agregar un comentario, ""=comentario del commit)
+5. git push <origin> <branch>: Subir los cambios locales a la rama seleccionada (branch=rama en la que se subiran los cambios)
