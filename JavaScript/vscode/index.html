@@ -1,0 +1,133 @@
+<!-- You could type ! + tab to get the basic html doc structure-->
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio Code Part 1</title>
+</head>
+<body>
+    <h1>My first Script</h1>
+    
+    <script> //This is the way to put a Script into a html code      
+        var hello = "Good Morning Camilo!";
+        console.log(hello);
+        /*
+            Variables: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/var
+        */
+    </script>
+
+    <h2>Comparing values</h2>
+
+    <script>
+        var red = true;
+        var blue = false;
+        var green;
+        /*
+            In JS, all the variables are true, except:
+            false, null, 0, Nan and undefined
+        */
+        if(green){
+            console.log("The statement is true");
+        }else{
+            console.log("The statement is false");
+        }
+    
+        var red = true;
+        var blue = false;
+        var green;
+        var myNum = 5;
+        var otherNum = 5;
+        var notNum = "5";
+
+        /* 
+            == (equals) | =! (different) | < (less than)
+            > (greater than) | === (exactly the same)
+            
+            === is recomendly used to complex program to 
+            reduce the prob of get some error during the 
+            execution of the program
+        */ 
+
+        if(myNum === notNum){
+            console.log("The statement is true");
+        }else{
+            console.log("The statement is false");
+        }
+
+        /*  You can try changing the values at top of the
+            Scritp in the Selections to see different 
+            comparation results
+        */
+
+        var color = ['red', 'green','blue', 'yellow'];
+        var selectedColor = color[3];
+        /*
+            When you need to compare more than 2 cases, you
+            can use the else if like this:
+        */
+        if(selectedColor == 'red'){
+            console.log("The color is red");
+        }else if(selectedColor == 'green'){
+            console.log("The color is green");
+        }else if(selectedColor == 'blue'){
+            console.log("The color is blue");
+        }else{
+            console.log("The color is yellow");
+        }
+
+        /*
+            We could evaluate more than one comparation
+            using the "&&" (and), "||" (or).
+            The first one (&&)require that both conditions being true
+            and the second one (||) just need that one condition being true
+        */
+
+        var goodMood = true;
+        var gotSleep = false;
+
+        if(goodMood && gotSleep){
+            console.log("Today is a good day");
+        }else{
+            console.log("I am grumpy!");
+        }
+
+        var gotBreakfast = true;
+        var gotLunch = true;
+        var gotDinner = false;
+
+        if(gotBreakfast || gotLunch || gotDinner){
+            console.log("Things are ok!");
+        }else{
+            console.log("I am STARVING")
+        }
+        /*  
+            if else: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/if...else
+            Operators: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators
+        */
+    </script>
+
+    <h2>Switch Statements</h2>
+        
+    <script>
+        /*
+            The Switch Statements is comomnly used when you
+            don't need to do complex comparations or conditions
+            to do something, this function only need one variable
+        */
+        switch(selectedColor){
+            case "red": console.log("The color is red"); break;
+            case "green": console.log("The color is green"); break;
+            case "blue": console.log("The color is blue"); break;
+            case "yellow": console.log("The color is yellow"); break;
+            default: console.log("There was an error!");
+        }
+        /*
+            Switch: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/switch
+        */
+
+    </script>
+</body>
+</html>
