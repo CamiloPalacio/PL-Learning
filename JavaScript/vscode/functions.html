@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Functions in JavaScript</h1>
+    <script>
+        function doStuff(){
+            var myString = "Here is a string of text";
+            var upperString = myString.toUpperCase();
+            console.log(myString);
+            console.log(upperString);
+        }
+        doStuff();
+
+        function fullName(){
+            var fName = "Camilo";
+            var lName = "Palacio";
+            console.log(fName+" "+lName);
+        }
+        fullName();
+
+        function upperMessage(message){
+            var upperMessage= message.toUpperCase();
+            console.log(upperMessage);
+        }
+        upperMessage('here is a message')
+
+        function addNums(num1, num2){
+            var sum = num1 + num2;
+            console.log(sum);
+        }
+        addNums(329, 419);
+
+        function returnSum(num1, num2){
+            var sum = num1 + num2;
+            return sum;
+        }
+        returnSum(329, 419);
+
+        
+        var food=['Cheese', 'Hamburguer', 'grapes', 'chicken'];
+        function randomInt(min,max){
+
+             return min + Math.floor(Math.random()*(max - min + 1));
+        }
+        console.log(food[randomInt(0, food.length-1)]);
+
+        var greeting = function(){
+            console.log("hello from the function!");
+        }
+        greeting();
+
+        var greeting = "Hello, and good morning!";
+
+        function capitalizeFunction(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+
+        var capitalizeExpression = function(anyString){
+            anyString = anyString.toUpperCase();
+            return anyString;
+        }
+
+        var capitalizeArrow = anyString => anyString.toUpperCase();
+        console.log(capitalizeExpression(greeting));
+        console.log(capitalizeFunction(greeting));
+        console.log(capitalizeArrow(greeting));
+
+    </script>
+    
+</body>
+</html>

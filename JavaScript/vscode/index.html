@@ -129,5 +129,98 @@
         */
 
     </script>
+
+    <h2>Loops</h2>
+
+    <script>
+        /*
+            There's no much to agregate xd
+        */
+        for(var i=0; i<10; i++){
+            console.log(i);
+        }
+
+        //And working with arrays...
+        var colors = ['red', 'blue', 'yellow', 'green']
+
+        for(var i=0; i<colors.length; i++){
+            console.log(colors[i]);
+        }
+        //or
+        for(var eachItem of colors){
+            console.log(eachItem);
+        }
+        //And also treating a string like an array
+        var myString = "Here is a string of text"
+        for(var i=0; i<myString.length; i++){
+            console.log(myString[i])
+        }
+        //or
+        for(var eachLetter of myString){
+            console.log(eachLetter);
+        }
+
+        /*
+            Also exist the while loop, that have the same
+            objective of the for, but, in this case, our loop
+            will run as long as the condition is true  
+        */
+       var i = 0;
+       var text = "";
+        /*
+       while(i <10){
+            text+= `The incrementor has gone up to ${i}\n`;
+            i++;
+       }
+       */
+
+       /*
+        Note: Using `` is the best way to work with combination
+        of strings an variables at the same line like the last example.
+        Also you can work with: "string" + varName + "string"
+       */
+      while(i<11){
+          text +=`The incrementor is ${i}, the incrementor squared is ${i*i}\n`
+          i++;
+      }
+      console.log(text);
+        /*
+            For loop: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for
+            For...of: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for...of
+            While: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/while
+        */
+
+    </script>
+
+    <h2>String Methods</h2>
+    <script>
+        var myString = "I am really hungry for some";
+        console.log(myString);
+        var myUpperString = myString.toUpperCase();
+        console.log(myUpperString);
+
+        var reallyLocation = myString.search('really');
+        console.log(reallyLocation);
+        var specialWord = myString.substr(reallyLocation, 6);
+        console.log(specialWord);
+        specialWord=specialWord.toUpperCase();
+        var newString =myString.replace('really', specialWord);
+        console.log(newString);
+
+        var foods = ['Hamburguer', 'Hot Dog', 'Pizza','Ice Cream']
+        for(var eachFood of foods){
+            console.log(`${myString} ${eachFood}`);
+        }
+
+        for(var i=0; i<foods.length; i++){
+            if(i%2==0){
+                console.log(`${myString} ${foods[i].toUpperCase()}`);
+            }else{
+                console.log(`${myString} ${foods[i]}`);
+            }
+        }
+
+
+    </script>
 </body>
 </html>
