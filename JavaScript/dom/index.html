@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Examples</title>
+</head>
+<body>
+    <h1>DOM Examples</h1>
+    <h2 id="one">Here is some text</h2>
+    <h3>Here is a heading 3</h3>
+    <h3>Here is another heading 3</h3>
+    <h3>Here is one more heading 3</h3>
+    <h4 class="special">Here is a especial heading</h4>
+    <h5 class="special">Here is another especial heading</h5>
+    
+    <script>
+        document.getElementById("one").style.color = "red";
+
+        var h3s = document.getElementsByTagName("h3");
+        for(var i=0; i<h3s.length; i++){
+            h3s[i].style.color="blue"
+        }
+
+        var myClass = document.getElementsByClassName("special");
+        for(var i=0; i<myClass.length; i++){
+            myClass[i].style.color="green";
+        }
+        /*
+            Methods like getElementsByTagName or getElementsByClassName
+            use collections (treated as arrays) to get the html elements
+        */
+
+    </script>
+
+</body>
+</html>
