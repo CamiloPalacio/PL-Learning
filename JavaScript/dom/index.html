@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Examples</title>
+    <style>
+        .blue{color:blue;}
+    </style>
 </head>
 <body>
     <h1>DOM Examples</h1>
@@ -14,13 +17,28 @@
     <h3>Here is one more heading 3</h3>
     <h4 class="special">Here is a especial heading</h4>
     <h5 class="special">Here is another especial heading</h5>
-    
+
+    <div id="special">
+        <p class="someclass">Here is a paragraph</p>
+        <p>Here is another paragraph</p>
+        <p>Here is one more paragraph</p>
+    </div>
+
+    <div id="name">
+        <p class="someclass">Here is a paragraph</p>
+        <p>Here is another paragraph</p>
+        <p>Here is one more paragraph</p>
+    </div>
+
+    <form action="">
+        <label><input type="checkbox">Yes!</label>
+    </form>
     <script>
         document.getElementById("one").style.color = "red";
 
         var h3s = document.getElementsByTagName("h3");
         for(var i=0; i<h3s.length; i++){
-            h3s[i].style.color="blue"
+            h3s[i].style.color="blue";
         }
 
         var myClass = document.getElementsByClassName("special");
@@ -30,6 +48,31 @@
         /*
             Methods like getElementsByTagName or getElementsByClassName
             use collections (treated as arrays) to get the html elements
+        */
+
+        var myText = document.querySelector('#special .someclass');
+        myText.style.color = "yellow";
+        var myAllText = document.querySelectorAll('#special p');
+        for(var i=0; i<myAllText.length;i++){
+            myAllText[i].style.fontWeight="bold";
+        }
+
+        var myDiv = document.getElementById('special');
+        //or myDiv = document.querySelector('#special');
+        myDiv.innerHTML ="<p>Here is my new paragraph</p>";
+        /*
+            the innerHtml will replace your actual html with a completely
+            new html structure
+        */
+
+        var firstPara = document.querySelector('#name p');
+        firstPara.className="blue";
+
+        var myCheckbox = document.querySelector('input');
+        myCheckbox.setAttribute('checked', 'checked');
+        /*
+            with setAttribute you can change whatever attribute that
+            you want of an element in your document
         */
 
     </script>
