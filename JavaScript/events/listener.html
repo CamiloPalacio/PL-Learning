@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1>JavaScript Events</h1>
+    <button>Don't Press Me!</button>
+    <a href="http://google.com">Link to Google</a>
+    
+    <script>
+        var btn = document.querySelector('button');
+        var link = document.querySelector('a');
+
+        link.addEventListener('click', function(evt){
+            event.preventDefault();
+            alert("Sorry, not google for you!");
+        });
+        
+        btn.addEventListener('click', function(xd){
+            xd.target.style.backgroundColor = "red";
+            alert("I told you not to press me!");
+        });
+        
+    </script>
+</body>
+</html>
