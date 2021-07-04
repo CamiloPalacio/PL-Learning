@@ -7,4 +7,4 @@
         text.style.color = "green";
     });
 
-}())
+})();
