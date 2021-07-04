@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <h1>Testing Scope in JavaScript</h1>
+
+    <script>
+
+        //Strategy 1: Never use global scope
+        var aVariable = "This is in the global scope";
+
+        function testScope(){
+            oopsGlobal = "xd";
+            var aVariable = "This is in the local scope";
+            console.log(aVariable)
+        };
+
+        testScope();
+        console.log(aVariable);
+        console.log(oopsGlobal);
+        /*Immediately Invoked Function Expression
+        (function(){
+            //some cool script
+        }());
+
+        */
+    </script>
+    <script>
+
+        //Strategy 2: "use strict" directive
+        "use strict";
+        newVar = "not properly defined";
+        console.log(newVar);
+
+    </script>
+    <script>
+        //Strategy 3: const and let variables.
+        const cheese = "yummy";
+        console.log(cheese);
+        cheese = "cheese is yummy";
+
+        for(let i=0; i<10; i++){
+            console.log(i);
+        }
+        console.log(`the value of i is ${i}`);
+    </script>
+</body>
+</html>
