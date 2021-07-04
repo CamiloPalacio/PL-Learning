@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 26</title>
+</head>
+
+<body>
+    <h1>JavaScript Event Challenge: Challenge 26</h1>
+    <div>
+        <p>This is paragraph number 1</p>
+        
+    </div>
+    
+    <button id="add">Add a paragraph</button>
+    <button id="remove">Remove paragraph</button>
+
+    <script>
+        var myDiv = document.querySelector('div');
+        var addBtn = document.querySelector('#add');
+        var rmvBtn = document.querySelector('#remove')
+
+        addBtn.addEventListener('click', function(){
+            var newText= document.createElement('p');
+            newText.appendChild(document.createTextNode(`This is paragraph number ${myDiv.children.length+1}`));
+            myDiv.appendChild(newText);      
+        });
+
+        rmvBtn.addEventListener('click', function(){
+            if(myDiv.children.length === 1){
+                alert("There's the last paragraph of the page")
+            }else{
+                myDiv.removeChild(myDiv.children[myDiv.children.length-1]);
+            }
+            
+        });
+
+    </script>    
+</body>
+</html>
